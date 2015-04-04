@@ -1,0 +1,1 @@
+{"name":"iWCT-GraphX-algorithm","tagline":"Graph algorithms implemented in GraphX and Spark styles","body":"# graphx-algorithm\r\nGraph algorithms implemented in GraphX and Spark styles\r\n\r\n# IDE\r\n1. IntelliJ IDEA >= 14\r\n2. Scala SDK == 2.10.5\r\n","google":"","note":"Don't delete this file! It's used internally to help with page regeneration."}
