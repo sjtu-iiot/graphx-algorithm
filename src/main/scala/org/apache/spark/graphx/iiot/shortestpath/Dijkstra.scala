@@ -1,5 +1,6 @@
-package iiot.graphx.shortestpath
+package org.apache.spark.graphx.iiot.shortestpath
 
+import org.apache.spark.graphx.GraphLoaderPlus
 import org.apache.spark._
 import org.apache.spark.graphx._
 import org.apache.spark.rdd.RDD
@@ -42,12 +43,14 @@ object Dijkstra {
 
     val sc = new SparkContext(new SparkConf().setAppName("Dijkstra Algorithm"))
 
-    val graph = GraphLoader.edgeListFile(sc, inputFile)
+    val graph = GraphLoaderPlus.edgeListFile(sc, inputFile)
 
+    // `mapEdges` sometimes may be needed such as
+    // `g.mapEdges(e => (new scala.util.Random).nextInt(100))`
     val g = graph.mapVertices((id, _) =>
       if (id == sourceId) Array(0.0, id)
       else Array(Double.PositiveInfinity, id)
-    ).mapEdges(e => (new scala.util.Random).nextInt(100))
+    )
 
     val sssp = g.pregel(Array(Double.PositiveInfinity, -1))(
       (id, dist, newDist) => {
