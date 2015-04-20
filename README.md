@@ -8,6 +8,12 @@ Graph algorithms implemented in GraphX and Spark styles
 4. GraphX 2.1.0
 5. Apache Maven >= 3.3.1
 
+# Development Directory
+The implementations of the algorithms are placed in package `org.apache.spark.graphx.iiot`. The other modified/added
+files are listed as follows:
+
+- org.apache.spark.graphx.GraphLoaderPlus
+
 # Spark Project Example
 [SimpleSparkApp](https://github.com/sryza/simplesparkapp)
 
