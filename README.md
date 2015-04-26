@@ -1,12 +1,27 @@
 # graphx-algorithm
 Graph algorithms implemented in GraphX and Spark styles
 
-# IDE
-1. IntelliJ IDEA >= 14
-2. Scala SDK == 2.10.5
+# Import
+0. Install necessary dependencies shown below
+1. Open [IntelliJ IDEA](https://www.jetbrains.com/idea/download/), click "Check out from Version Control", choose "GitHub" and paste
+```
+https://github.com/sjtu-iiot/graphx-algorithm
+```
+2. Import as an external model "Maven", click "Next", Chose "Import Maven projects automatically" (this step may not be needed)
+3. Open "File - Project Structure", find "SDKs", add JDK path to it, e.g.
+```
+/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home
+```
+4. Find "Global Libraries" under "SDKs", add "Scala SDK". Click "Download", and choose "2.10.5"
+5. Now you can use `mvn package` to compile the project
+
+# Dependencies
+1. [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) >= 14
+2. [Scala](http://www.scala-lang.org/download/2.10.5.html) SDK == 2.10.5
 3. Spark 1.3.0
 4. GraphX 2.1.0
-5. Apache Maven >= 3.3.1
+5. [Apache Maven](https://maven.apache.org/download.cgi) >= 3.3.1
+6. [Java SE Development Kits](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
 # Development Directory
 The implementations of the algorithms are placed in package `org.apache.spark.graphx.iiot`. The other modified/added
